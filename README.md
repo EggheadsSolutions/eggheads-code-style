@@ -37,6 +37,8 @@
 ```
 
 - Запуск сниффера:
-  `vendor/bin/phpcs --colors -p src/ tests/`
+  `vendor/bin/phpcs`
 - Автоисправление:
-  `vendor/bin/phpcbf --colors -p src/ tests/`
+  `vendor/bin/phpcbf`
+- Запуск в TeamCity:
+  `vendor/bin/phpcs --report=\\setasign\\PhpcsTeamcityReport\\TeamcityReport`
