@@ -5,9 +5,7 @@
   "type": "project",
   "license": "MIT",
   "require": {
-    "php": ">=7.0"
-  },
-  "require-dev": {
+    "php": ">=7.0",
     "squizlabs/php_codesniffer": "3.*",
     "setasign/phpcs-teamcity-report": "^1.0"
   },
