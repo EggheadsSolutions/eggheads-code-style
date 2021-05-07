@@ -67,13 +67,31 @@ class Something {
         <example>
             <![CDATA[
 class Something {
-    public static function main( array $as ) {
+    public static function main() {
        ...
     }
     public function second() {
         ...
     }
 }
+            ]]>
+        </example>
+    </rule>
+
+    <rule name="ArrayType"
+          message="(ArrayType) Describe array type: {0}."
+          file="../resources/MessDetector/ArrayType.php"
+          class="Eggheads\MessDetector\ArrayType"
+          externalInfoUrl="https://github.com/vovantune/eggheads-code-style/blob/master/resources/MessDetector/ArrayType.php">
+        <priority>3</priority>
+        <example>
+            <![CDATA[
+    /**
+     * @param array $input
+     */
+    public function main( array $input ) {
+        ...
+    }
             ]]>
         </example>
     </rule>
