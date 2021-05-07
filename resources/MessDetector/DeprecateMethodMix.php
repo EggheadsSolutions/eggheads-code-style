@@ -1,6 +1,6 @@
 <?php
 
-namespace Resources\MessDetector;
+namespace Eggheads\MessDetector;
 
 use \PHPMD\AbstractNode;
 use \PDepend\Source\AST\ASTMethod;
