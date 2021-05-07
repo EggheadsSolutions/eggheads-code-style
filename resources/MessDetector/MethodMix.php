@@ -7,7 +7,7 @@ use \PDepend\Source\AST\ASTMethod;
 use PHPMD\AbstractRule;
 use PHPMD\Rule\ClassAware;
 
-class DeprecateMethodMix extends AbstractRule implements ClassAware
+class MethodMix extends AbstractRule implements ClassAware
 {
     /**
      * Не проверяем их
