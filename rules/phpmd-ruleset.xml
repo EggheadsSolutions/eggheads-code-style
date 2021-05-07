@@ -78,11 +78,11 @@ class Something {
         </example>
     </rule>
 
-    <rule name="ArrayType"
-          message="(ArrayType) Describe array type: {0}."
-          file="../resources/MessDetector/ArrayType.php"
-          class="Eggheads\MessDetector\ArrayType"
-          externalInfoUrl="https://github.com/vovantune/eggheads-code-style/blob/master/resources/MessDetector/ArrayType.php">
+    <rule name="MethodArgs"
+          message="(MethodArgs) Method arguments/result error: {0}."
+          file="../resources/MessDetector/MethodArgs.php"
+          class="Eggheads\MessDetector\MethodArgs"
+          externalInfoUrl="https://github.com/vovantune/eggheads-code-style/blob/master/resources/MessDetector/MethodArgs.php">
         <priority>3</priority>
         <example>
             <![CDATA[
