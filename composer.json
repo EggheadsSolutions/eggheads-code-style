@@ -6,7 +6,6 @@
   "license": "MIT",
   "require": {
     "php": ">=7.0",
-    "phpdocumentor/reflection-docblock": "^5.2",
     "phpmd/phpmd": "@stable",
     "phpstan/phpdoc-parser": "^0.5.4",
     "setasign/phpcs-teamcity-report": "^1.0",
