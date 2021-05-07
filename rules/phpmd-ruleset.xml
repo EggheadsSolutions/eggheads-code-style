@@ -57,7 +57,7 @@ class Something {
 
     <rule name="FunctionRule"
           message="Static and dynamic methods mix in single class: {0}."
-          class="Eggheads\MessDetector\DeprecateMethodMix"
+          class="Resources\MessDetector\DeprecateMethodMix"
           externalInfoUrl="https://eggheads.solutions/phpmd/rules.html#functionrule">
         <priority>1</priority>
         <example>
