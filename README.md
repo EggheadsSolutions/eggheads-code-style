@@ -42,3 +42,24 @@
   `vendor/bin/phpcbf`
 - Запуск в TeamCity:
   `vendor/bin/phpcs --report=\\setasign\\PhpcsTeamcityReport\\TeamcityReport`
+
+# Настройка Php Mess Detector
+
+- Создаём в корне проекта файл phpmd-ruleset.xml вида:
+
+```xml
+<?xml version="1.0"?>
+<ruleset name="Eggheads code style rule set"
+         xmlns="http://pmd.sf.net/ruleset/1.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0
+                     http://pmd.sf.net/ruleset_xml_schema.xsd"
+         xsi:noNamespaceSchemaLocation="
+                     http://pmd.sf.net/ruleset_xml_schema.xsd">
+
+    <rule ref="vendor/eggheads/eggheads-code-style/rules/phpmd-ruleset.xml"/>
+</ruleset>
+```
+
+- Запуск phpmd:
+  `vendor/bin/phpmd src/,tests/ text phpmd-ruleset.xml`

@@ -54,4 +54,23 @@ class Something {
         <exclude name="ElseExpression"/>
         <exclude name="IfStatementAssignment"/>
     </rule>
+
+    <rule name="FunctionRule"
+          message="Static and dynamic methods mix in single class: {0}."
+          class="Eggheads\MessDetector\DeprecateMethodMix"
+          externalInfoUrl="https://eggheads.solutions/phpmd/rules.html#functionrule">
+        <priority>1</priority>
+        <example>
+            <![CDATA[
+class Something {
+    public static function main( array $as ) {
+       ...
+    }
+    public function second() {
+        ...
+    }
+}
+            ]]>
+        </example>
+    </rule>
 </ruleset>
