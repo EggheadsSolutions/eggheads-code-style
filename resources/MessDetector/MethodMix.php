@@ -7,6 +7,21 @@ use \PDepend\Source\AST\ASTMethod;
 use PHPMD\AbstractRule;
 use PHPMD\Rule\ClassAware;
 
+/**
+ * Запрет на одновременное использование в классе статических и обычных методов.
+ * Например:
+ * ```php
+ * class Something {
+ *  public static function main( array $as ) {
+ *      ...
+ *  }
+ *  public function second() {
+ *      ...
+ *  }
+ * }
+ * ```
+ * Отключается следующей конструкцией в phpDoc класса: "@SuppressWarnings(PHPMD.MethodMix)"
+ */
 class MethodMix extends AbstractRule implements ClassAware
 {
     /**

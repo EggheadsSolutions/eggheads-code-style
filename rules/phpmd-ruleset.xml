@@ -60,7 +60,7 @@ class Something {
           message="(MethodMix) Static and dynamic methods mix in single class: {0}."
           file="../resources/MessDetector/MethodMix.php"
           class="Eggheads\MessDetector\MethodMix"
-          externalInfoUrl="https://eggheads.solutions/phpmd/rules.html#functionrule">
+          externalInfoUrl="https://github.com/vovantune/eggheads-code-style/blob/master/resources/MessDetector/MethodMix.php">
         <priority>3</priority>
         <example>
             <![CDATA[
