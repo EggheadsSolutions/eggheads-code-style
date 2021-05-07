@@ -54,6 +54,7 @@ class Something {
         <exclude name="ElseExpression"/>
         <exclude name="IfStatementAssignment"/>
         <exclude name="BooleanArgumentFlag"/>
+        <exclude name="UndefinedVariable"/>
     </rule>
 
     <rule name="MethodMix"
