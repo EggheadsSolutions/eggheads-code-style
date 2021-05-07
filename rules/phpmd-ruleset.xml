@@ -55,7 +55,7 @@ class Something {
         <exclude name="IfStatementAssignment"/>
     </rule>
 
-    <rule name="FunctionRule"
+    <rule name="DeprecateMethodMix"
           message="Static and dynamic methods mix in single class: {0}."
           file="../resources/MessDetector/DeprecateMethodMix.php"
           class="Eggheads\MessDetector\DeprecateMethodMix"
