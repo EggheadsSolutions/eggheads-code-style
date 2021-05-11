@@ -67,13 +67,31 @@ class Something {
         <example>
             <![CDATA[
 class Something {
-    public static function main( array $as ) {
+    public static function main() {
        ...
     }
     public function second() {
         ...
     }
 }
+            ]]>
+        </example>
+    </rule>
+
+    <rule name="MethodArgs"
+          message="(MethodArgs) Method arguments/result error: {0}."
+          file="../resources/MessDetector/MethodArgs.php"
+          class="Eggheads\MessDetector\MethodArgs"
+          externalInfoUrl="https://github.com/vovantune/eggheads-code-style/blob/master/resources/MessDetector/MethodArgs.php">
+        <priority>3</priority>
+        <example>
+            <![CDATA[
+    /**
+     * @param array $input
+     */
+    public function main( array $input ) {
+        ...
+    }
             ]]>
         </example>
     </rule>

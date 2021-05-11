@@ -51,9 +51,7 @@ class MethodMix extends AbstractRule implements ClassAware
     ];
 
     /**
-     * Запрет на наличие в одном классе абстрактных и обычных публичных методов
-     *
-     * @param \PHPMD\AbstractNode $node
+     * @param AbstractNode $node
      * @return void
      */
     public function apply(AbstractNode $node)
