@@ -74,10 +74,6 @@ class MethodArgs extends AbstractRule implements MethodAware
             return;
         }
 
-        if ($valueNode->parameterName == '$badInput3') {
-            print_r($valueNode->type);
-        }
-
         if ($valueNode->type instanceof UnionTypeNode) {
             $types = $valueNode->type->types;
         } elseif ($valueNode->type instanceof NullableTypeNode) {
