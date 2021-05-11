@@ -10,6 +10,8 @@ use PHPStan\PhpDocParser\Ast\PhpDoc\ParamTagValueNode;
 use PHPStan\PhpDocParser\Ast\PhpDoc\PhpDocTagNode;
 use PHPStan\PhpDocParser\Ast\PhpDoc\ReturnTagValueNode;
 use PHPStan\PhpDocParser\Ast\Type\IdentifierTypeNode;
+use PHPStan\PhpDocParser\Ast\Type\NullableTypeNode;
+use PHPStan\PhpDocParser\Ast\Type\UnionTypeNode;
 use PHPStan\PhpDocParser\Lexer\Lexer;
 use PHPStan\PhpDocParser\Parser\ConstExprParser;
 use PHPStan\PhpDocParser\Parser\PhpDocParser;
@@ -72,14 +74,28 @@ class MethodArgs extends AbstractRule implements MethodAware
             return;
         }
 
-        if ($valueNode->type instanceof IdentifierTypeNode && $valueNode->type->name === 'array') {
-            if ($valueNode instanceof ReturnTagValueNode) {
-                $message = 'Describe result array';
-            } else {
-                $message = 'Describe array ' . $valueNode->parameterName;
-            }
+        if ($valueNode->parameterName == '$badInput3') {
+            print_r($valueNode->type);
+        }
 
-            $this->addViolation($node, [$message]);
+        if ($valueNode->type instanceof UnionTypeNode) {
+            $types = $valueNode->type->types;
+        } elseif ($valueNode->type instanceof NullableTypeNode) {
+            $types = [$valueNode->type->type];
+        } else {
+            $types = [$valueNode->type];
+        }
+
+        foreach ($types as $type) {
+            if ($type instanceof IdentifierTypeNode && $type->name === 'array') {
+                if ($valueNode instanceof ReturnTagValueNode) {
+                    $message = 'Describe result array';
+                } else {
+                    $message = 'Describe array ' . $valueNode->parameterName;
+                }
+
+                $this->addViolation($node, [$message]);
+            }
         }
     }
 }

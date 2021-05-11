@@ -17,12 +17,14 @@ class TestClass
 
     /**
      * @param array $badInput
+     * @param null|array $badInput2
+     * @param ?array $badInput3
      * @param array{output: string, debug: string $incorrectDocInput
      * @return array
      */
-    public function second(array $badInput, array $incorrectDocInput): array
+    public function second(array $badInput, ?array $badInput2, ?array $badInput3, array $incorrectDocInput): array
     {
-        return [$badInput, $incorrectDocInput];
+        return [$badInput, $incorrectDocInput, $badInput2, $badInput3];
     }
 
     /**
