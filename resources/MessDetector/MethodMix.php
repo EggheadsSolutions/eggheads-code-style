@@ -5,6 +5,7 @@ namespace Eggheads\MessDetector;
 use \PHPMD\AbstractNode;
 use \PDepend\Source\AST\ASTMethod;
 use PHPMD\AbstractRule;
+use PHPMD\Node\ClassNode;
 use PHPMD\Rule\ClassAware;
 
 /**
@@ -51,7 +52,8 @@ class MethodMix extends AbstractRule implements ClassAware
     ];
 
     /**
-     * @param AbstractNode $node
+     * @inheritDoc
+     * @param ClassNode $node
      * @return void
      */
     public function apply(AbstractNode $node)

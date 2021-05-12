@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ruleset name="My first PHPMD rule set"
+<ruleset name="Eggheads code style rule set"
          xmlns="http://pmd.sf.net/ruleset/1.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0
@@ -92,6 +92,22 @@ class Something {
     public function main( array $input ) {
         ...
     }
+            ]]>
+        </example>
+    </rule>
+
+    <rule name="MethodProps"
+          message="(MethodProps) Property error: {0}."
+          file="../resources/MessDetector/MethodProps.php"
+          class="Eggheads\MessDetector\MethodProps"
+          externalInfoUrl="https://github.com/vovantune/eggheads-code-style/blob/master/resources/MessDetector/MethodProps.php">
+        <priority>3</priority>
+        <example>
+            <![CDATA[
+    /**
+     * @var array
+     */
+    public $prop;
             ]]>
         </example>
     </rule>
