@@ -53,6 +53,8 @@ class MethodProps extends AbstractRule implements ClassAware
         if (empty($varDoc) && !$isInheritDoc) {
             $this->addViolation($node, ['Empty @var tag']);
             return;
+        } elseif (empty($varDoc)) {
+            return;
         }
 
         $this->_checkTypeBlock($node, array_pop($varDoc));
