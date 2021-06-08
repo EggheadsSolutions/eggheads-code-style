@@ -1,9 +1,7 @@
 # Установка
 
 - В composer.json в require-dev прописываем:
-  `"eggheads/eggheads-code-style": "dev-master"`
-- Не забываем указывать там же:
-  `"minimum-stability": "dev"`
+  `"eggheads/eggheads-code-style": "^1"`
 - Подключаем репозиторий:
 
 ```json
@@ -63,3 +61,6 @@
 
 - Запуск phpmd:
   `vendor/bin/phpmd src/,tests/ text phpmd-ruleset.xml`
+- Запуск в TeamCity (Предварительно добавил phpmd-report.html Artifact paths для проекта, а также в Build Report Tabs
+  самого TeamCity):
+  `vendor/bin/phpmd src/,tests/ html phpmd-ruleset.xml > phpmd-report.html`
