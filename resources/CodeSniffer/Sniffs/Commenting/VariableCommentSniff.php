@@ -51,7 +51,7 @@ class VariableCommentSniff extends AbstractVariableSniff
 
         $foundVar = null;
         foreach ($tokens[$commentStart]['comment_tags'] as $tag) {
-            if (in_array(strtolower($tokens[$tag]['content']), ['@inheritdoc', '@deprecated'])) {
+            if (in_array(strtolower($tokens[$tag]['content']), ['@inheritdoc', '@deprecated', '@SerializedName'])) {
                 return;
             }
             if (strpos($tokens[$tag]['content'], '@OA\Property') === 0) {
