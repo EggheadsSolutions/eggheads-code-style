@@ -64,3 +64,20 @@
 - Запуск в TeamCity (Предварительно добавил phpmd-report.html Artifact paths для проекта, а также в Build Report Tabs
   самого TeamCity):
   `vendor/bin/phpmd src/,tests/ html phpmd-ruleset.xml > phpmd-report.html`
+
+# Настройка PHPStan
+
+- Создаём в корне проекта файл phpstan.neon вида:
+
+```neon
+parameters:
+    level: 6
+    paths:
+        - src
+        - tests
+    bootstrapFiles:
+        - config/bootstrap.php
+```
+
+- Запуск PHPStan: `vendor/bin/phpstan --configuration=phpstan.neon`
+- Запуск в TeamCity: `vendor/bin/phpstan --configuration=phpstan.neon --error-format=teamcity`
