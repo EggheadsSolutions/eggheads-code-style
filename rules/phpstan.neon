@@ -1,7 +1,7 @@
 parameters:
     level: 6
     paths:
-        - src
-        - tests
+        - ../../../../src
+        - ../../../../tests
     bootstrapFiles:
         - ../../../../config/bootstrap.php
