@@ -26,3 +26,13 @@ nbproject/*
 /.phpcs-cache
 /.phpunit.result.cache
 
+/.idea/
+/.bash_history
+/.cache/
+/.composer/
+/.config/
+/.local/
+/.pdepend/
+
+/dev/php/xdebug.log
+/dev/php/.phpcs-cache

@@ -7,7 +7,7 @@
 ```json
 {
     "type": "vcs",
-    "url": "git://github.com/vovantune/eggheads-code-style"
+    "url": "git://github.com/EggheadsSolutions/eggheads-code-style"
 }
 ```
 
@@ -81,3 +81,12 @@ parameters:
 
 - Запуск PHPStan: `vendor/bin/phpstan --configuration=phpstan.neon`
 - Запуск в TeamCity: `vendor/bin/phpstan --configuration=phpstan.neon --error-format=teamcity`
+
+# Настройка тестового окружения
+```bash
+docker-compose up -d
+# подключаемся по ssh к проекту
+docker-compose exec -u www-data php bash
+# запускаем все тесты
+composer check
+```
